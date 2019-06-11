@@ -3,8 +3,9 @@
 			text-align: center;}
 .col { border: 2px solid black;
 			width: 30%;}
-			
+
 td { text-align: center; }
 
 table { padding-left: 20%;
 		}
+body { background-color: lightgrey;  }
