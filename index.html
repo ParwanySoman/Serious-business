@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="stylesheet.css">
+
+	<title></title>
+</head>
+<body align="center">
+
+	<div class="today">
+		<p>Today it is</p>
+		<p id="today"> Today is </p>
+		<p id="time"> It is now </p>
+	</div>
+
+
+	<div class="col">
+		<p id="store"></p>
+	</div>
+
+
+
+	<div class="col">
+		<table>
+			<tr> 
+				<thead>
+			<b> Openingsuren </b>
+				</thead>
+			</tr>	
+			<tr>
+				<td>Maandag:</td>
+				<td>08.30</td>
+				<td>20.00 <br/></td>
+			</tr>
+			<tr>
+				<td>Dinsdag</td>
+				<td>08.30</td>
+				<td>20.00 <br/></td>
+			</tr>
+			<tr>
+				<td>Woensdag</td>
+				<td>08.30</td>
+				<td>20.00 <br/></td>
+			</tr>
+			<tr>
+				<td>Donderdag</td>
+				<td>08.30</td>
+				<td>20.00 <br/> </td>
+			</tr>
+			<tr>
+				<td>Vrijdag</td>
+				<td>08.30</td>
+				<td>20.00 <br/></td>
+			</tr>
+			<tr>
+				<td>Zaterdag</td>
+				<td>08.30</td>
+				<td>20.00 <br/> </td>
+			</tr>
+			<tr>
+				<td>Zondag</td>
+				<td> Gesloten <br/> </td>
+			</tr>
+		</table>
+
+	</div>
+
+
+
+<script>
+
+
+//date
+let date = new Date();
+document.getElementById("today").innerHTML = date.toDateString();
+
+
+//time
+let myVar = setInterval(myTimer, 1000);
+function myTimer() { 
+	let d = new Date();
+	var n = d.getDate();
+	let t = d.toLocaleTimeString();
+	var time = new Date().getHours();
+	document.getElementById("time").innerHTML = t;
+
+check(); //funcytion created to check the validity of if else statement
+	function check(){
+		if (time>08 && time<20){ //check the hours specified
+		document.getElementById("store").innerHTML =  " Today we are open! ";} //if open execute this msg
+		else{
+  		document.getElementById("store").innerHTML = " Today we are closed! ";} //if cloed execute this msg
+}
+}
+
+
+
+
+
+
+</script>
+
+
+
+</body>
+</html>
