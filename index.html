@@ -6,7 +6,7 @@
 
 	<title></title>
 </head>
-<body align="center">
+<body >
 
 	<div class="today">
 		<p>Today it is</p>
@@ -87,7 +87,7 @@ function myTimer() {
 
 check(); //funcytion created to check the validity of if else statement
 	function check(){
-		if (time>08 && time<20){ //check the hours specified
+		if (time>8 && time<20){ //check the hours specified
 		document.getElementById("store").innerHTML =  " Today we are open! ";} //if open execute this msg
 		else{
   		document.getElementById("store").innerHTML = " Today we are closed! ";} //if cloed execute this msg
