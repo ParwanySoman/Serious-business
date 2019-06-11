@@ -85,12 +85,12 @@ function myTimer() {
 	var time = new Date().getHours();
 	document.getElementById("time").innerHTML = t;
 
-check(); //funcytion created to check the validity of if else statement
+check(); //function created to check the validity of if else statement
 	function check(){
 		if (time>8 && time<20){ //check the hours specified
 		document.getElementById("store").innerHTML =  " Today we are open! ";} //if open execute this msg
 		else{
-  		document.getElementById("store").innerHTML = " Today we are closed! ";} //if cloed execute this msg
+  		document.getElementById("store").innerHTML = " Today we are closed! ";} //if closed execute this msg
 }
 }
 
